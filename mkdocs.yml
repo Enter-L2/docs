@@ -1,0 +1,218 @@
+site_name: Enter L2 Documentation
+site_description: Comprehensive documentation for Enter L2 - ZK Rollup stablecoin payment network
+site_author: Enter L2 Team
+site_url: https://docs.enterl2.com
+
+repo_name: enter-l2/docs
+repo_url: https://github.com/enter-l2/docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    - toc.follow
+
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      type: date
+  - minify:
+      minify_html: true
+  - social:
+      cards_layout_options:
+        background_color: "#1976d2"
+  - tags:
+      tags_file: tags.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: enter-l2
+      repo: docs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/enter-l2
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/enterl2
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/EnterL2
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/enterl2
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - Quick Start: getting-started/quickstart.md
+    - Network Information: getting-started/networks.md
+    - Glossary: getting-started/glossary.md
+  
+  - Whitepaper:
+    - Introduction: whitepaper/README.md
+    - Architecture: whitepaper/architecture.md
+    - Economics: whitepaper/economics.md
+    - Security: whitepaper/security.md
+  
+  - User Guide:
+    - Getting Started: user-guide/getting-started.md
+    - Wallet Setup: user-guide/wallet-setup.md
+    - Making Payments: user-guide/payments.md
+    - Bridge Guide: user-guide/bridge.md
+    - Name Service: user-guide/names.md
+    - Staking: user-guide/staking.md
+    - Security: user-guide/security.md
+    - Troubleshooting: user-guide/troubleshooting.md
+  
+  - Developer Guide:
+    - Integration: developer-guide/integration.md
+    - Architecture: developer-guide/architecture.md
+    - Smart Contracts: developer-guide/smart-contracts.md
+    - Testing: developer-guide/testing.md
+    - Best Practices: developer-guide/best-practices.md
+    - Migration: developer-guide/migration.md
+  
+  - SDK Reference:
+    - Overview: sdk/README.md
+    - Quick Start: sdk/quickstart.md
+    - TypeScript: sdk/typescript.md
+    - Go: sdk/go.md
+    - Python: sdk/python.md
+    - Examples: sdk/examples.md
+  
+  - API Reference:
+    - Overview: api/README.md
+    - JSON-RPC: api/json-rpc.md
+    - REST API: api/rest.md
+    - WebSocket: api/websocket.md
+    - GraphQL: api/graphql.md
+    - Rate Limits: api/rate-limits.md
+  
+  - Smart Contracts:
+    - Overview: smart-contracts/README.md
+    - Core Contracts: smart-contracts/core.md
+    - Wallet Contracts: smart-contracts/wallets.md
+    - Bridge Contracts: smart-contracts/bridge.md
+    - Staking Contracts: smart-contracts/staking.md
+    - Name Registry: smart-contracts/names.md
+    - ABIs: smart-contracts/abis.md
+  
+  - Node Operators:
+    - Setup Guide: node-operators/setup.md
+    - Configuration: node-operators/configuration.md
+    - Monitoring: node-operators/monitoring.md
+    - Maintenance: node-operators/maintenance.md
+    - Troubleshooting: node-operators/troubleshooting.md
+    - Security: node-operators/security.md
+  
+  - Tutorials:
+    - Basic Integration: tutorials/basic-integration.md
+    - Payment Gateway: tutorials/payment-gateway.md
+    - DeFi Integration: tutorials/defi-integration.md
+    - Mobile App: tutorials/mobile-app.md
+    - E-commerce: tutorials/ecommerce.md
+    - Analytics: tutorials/analytics.md
+  
+  - FAQ:
+    - General: faq/general.md
+    - Technical: faq/technical.md
+    - Economics: faq/economics.md
+    - Security: faq/security.md
+  
+  - Community:
+    - Contributing: community/contributing.md
+    - Code of Conduct: community/code-of-conduct.md
+    - Governance: community/governance.md
+    - Bug Bounty: community/bug-bounty.md
+    - Brand Kit: community/brand-kit.md
+
+copyright: Copyright &copy; 2024 Enter L2 Team
